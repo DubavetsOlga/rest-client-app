@@ -1,0 +1,53 @@
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+}
+
+.input:focus {
+  outline: 2px solid #000000;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+}
+
+.errorContainer {
+  height: 1.5rem;
+}
+
+.error {
+  color: #9b1313;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-weight: normal;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
