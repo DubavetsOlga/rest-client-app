@@ -1,0 +1,30 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutContainer {
+  max-width: 54rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.aboutProject {
+  text-align: center;
+}
+
+.aboutSchool {
+  font-size: 0.875rem;
+  text-align: center;
+}
