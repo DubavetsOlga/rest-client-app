@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ReactElement, ReactNode } from 'react';
+import { Alert } from '@/shared/components';
 
 export const metadata: Metadata = {
   title: 'REST Client App',
@@ -24,6 +25,7 @@ export default async function LocaleLayout({
     <html lang="en">
     <body>
     {children}
+    <Alert />
     </body>
     </html>
   );
