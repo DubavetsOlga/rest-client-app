@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ReactElement, ReactNode } from 'react';
+import { AppErrorBoundary } from '@/shared/components';
 
 export const metadata: Metadata = {
   title: 'REST Client App',
@@ -23,7 +24,9 @@ export default async function LocaleLayout({
   return (
     <html lang="en">
     <body>
-    {children}
+    <AppErrorBoundary>
+      {children}
+    </AppErrorBoundary>
     </body>
     </html>
   );
