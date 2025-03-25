@@ -1,0 +1,33 @@
+.developers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.developerContainer {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.developerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.75rem;
+}
+
+.link {
+  color: #555555;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.link:active {
+  color: #222222;
+}
