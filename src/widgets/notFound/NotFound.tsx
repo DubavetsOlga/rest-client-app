@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import s from './style.module.css';
+import s from './NotFound.module.css';
 
 type Props = {
   text?: string;
