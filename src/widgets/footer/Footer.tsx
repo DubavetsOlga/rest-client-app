@@ -1,6 +1,6 @@
 'use client';
 
-import s from './style.module.css';
+import s from './Footer.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import rslogo from '@/assets/rs-logo.svg';

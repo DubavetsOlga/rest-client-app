@@ -3,7 +3,7 @@
 import logo from '../../../public/favicon.png';
 import Image from 'next/image';
 import { Link } from '@/shared/i18n/routing';
-import s from './style.module.css';
+import s from './Header.module.css';
 import { LocaleSwitcher } from '@/features/localeSwitcher/localeSwitcher';
 import { useLocale } from 'use-intl';
 import { translate } from '@/shared/i18n/langSwitcher';

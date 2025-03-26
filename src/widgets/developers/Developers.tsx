@@ -1,4 +1,4 @@
-import s from './style.module.css';
+import s from './Developers.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import dev1 from '../../assets/dev1.png';
