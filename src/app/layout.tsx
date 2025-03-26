@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ReactElement, ReactNode } from 'react';
+import StoreProvider from '@/shared/providers/storeProviders';
 
 export const metadata: Metadata = {
   title: 'REST Client App',
@@ -23,7 +24,9 @@ export default async function LocaleLayout({
   return (
     <html lang="en">
     <body>
-    {children}
+    <StoreProvider>
+      {children}
+    </StoreProvider>
     </body>
     </html>
   );
