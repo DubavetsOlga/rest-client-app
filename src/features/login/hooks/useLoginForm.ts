@@ -13,11 +13,13 @@ const useGetSchema = () => {
       .string()
       .trim()
       .email(t.emailInvalid)
-      .refine((val) => val !== '', t.required),
+      .refine((val) => val !== '', t.required)
+      .transform((val) => val.trim()),
     password: z
       .string()
       .trim()
-      .refine((val) => val !== '', t.required),
+      .refine((val) => val !== '', t.required)
+      .transform((val) => val.trim()),
   });
 };
 

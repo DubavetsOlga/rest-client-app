@@ -17,18 +17,21 @@ const useGetSchema = () => {
         .string()
         .trim()
         .regex(/^\p{Lu}[\s\S]*$/u, t.nameCapitalized)
-        .refine((val) => val !== '', t.required),
+        .refine((val) => val !== '', t.required)
+        .transform((val) => val.trim()),
       email: z
         .string()
         .trim()
         .email(t.emailInvalid)
-        .refine((val) => val !== '', t.required),
+        .refine((val) => val !== '', t.required)
+        .transform((val) => val.trim()),
       password: z
         .string()
         .trim()
         .min(8, t.passwordMinLength)
         .regex(passwordRegex, t.passwordStrength)
-        .refine((val) => val !== '', t.required),
+        .refine((val) => val !== '', t.required)
+        .transform((val) => val.trim()),
       confirmPassword: z.string().trim(),
     })
     .refine((data) => data.password === data.confirmPassword, {

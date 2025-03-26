@@ -25,7 +25,7 @@ export const LoginForm = () => {
 
   const onSubmit = async (data: LoginFormValues) => {
     try {
-      await signIn(data.email.trim(), data.password.trim());
+      await signIn(data.email, data.password);
     } catch (error) {
       toast.error((error as FirebaseError).message || basic.unexpectedError);
     }

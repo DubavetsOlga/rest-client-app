@@ -16,17 +16,15 @@ export const metadata: Metadata = {
 };
 
 export default async function LocaleLayout({
-                                             children,
-                                           }: Readonly<{
+  children,
+}: Readonly<{
   children: ReactNode;
 }>): Promise<ReactElement> {
   return (
     <html lang="en">
-    <body>
-    <AuthProvider>
-      {children}
-    </AuthProvider>
-    </body>
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }

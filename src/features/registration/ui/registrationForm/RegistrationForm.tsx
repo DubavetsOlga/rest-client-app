@@ -26,9 +26,9 @@ export const RegistrationForm = () => {
   const onSubmit = async (data: RegistrationFormValues) => {
     try {
       await createUser({
-        name: data.name.trim(),
-        email: data.email.trim(),
-        password: data.password.trim(),
+        name: data.name,
+        email: data.email,
+        password: data.password,
       });
     } catch (error) {
       toast.error((error as FirebaseError).message || basic.unexpectedError);
