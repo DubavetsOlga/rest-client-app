@@ -1,7 +1,7 @@
 'use client';
 
 import { Component, ErrorInfo, ReactNode } from 'react';
-import s from './style.module.css';
+import s from './ErrorBoundary.module.css';
 import { Button } from '@/shared/components';
 type Props = {
   children?: ReactNode;
