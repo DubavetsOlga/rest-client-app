@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import s from './style.module.css';
+import s from './Spinner.module.css';
 
 export type SpinnerProps = {
   size?: number;

@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
-import s from './style.module.css';
+import s from './Button.module.css';
 import { Link } from '@/shared/i18n/routing';
 
 type Props = {

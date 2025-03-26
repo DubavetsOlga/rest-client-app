@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef, ReactElement, ReactNode } from 'react';
-import s from './style.module.css';
+import s from './Card.module.css';
 
 type Props = {
   className?: string;

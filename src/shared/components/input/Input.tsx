@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ComponentProps, ReactNode, Ref } from 'react';
 import eyeOpenIcon from '../../../assets/eye-open.svg';
 import eyeClosedIcon from '../../../assets/eye-closed.svg';
-import s from './style.module.css';
+import s from './Input.module.css';
 import Image from 'next/image';
 
 type Props = ComponentProps<'input'> & {
