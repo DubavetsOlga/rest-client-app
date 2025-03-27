@@ -1,11 +1,11 @@
 import { ReactElement } from 'react';
 import s from './Spinner.module.css';
 
-export type SpinnerProps = {
+type Props = {
   size?: number;
 };
 
-export const Spinner = ({ size = 48 }: SpinnerProps): ReactElement => {
+export const Spinner = ({ size = 48 }: Props): ReactElement => {
   const style = {
     height: size,
     width: size,

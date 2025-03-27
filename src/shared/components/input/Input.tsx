@@ -2,10 +2,8 @@
 
 import { useState } from 'react';
 import { ComponentProps, ReactNode, Ref } from 'react';
-import eyeOpenIcon from '../../../assets/eye-open.svg';
-import eyeClosedIcon from '../../../assets/eye-closed.svg';
 import s from './Input.module.css';
-import Image from 'next/image';
+import { Eye, EyeClosed } from 'lucide-react';
 
 type Props = ComponentProps<'input'> & {
   label?: string;
@@ -60,11 +58,7 @@ export const Input = ({
               className={s.togglePassword}
               onClick={togglePasswordVisibility}
             >
-              {passwordVisible ? (
-                <Image src={eyeClosedIcon} alt="Eye Closed Icon" />
-              ) : (
-                <Image src={eyeOpenIcon} alt="Eye Open Icon" />
-              )}
+              {passwordVisible ? <EyeClosed /> : <Eye />}
             </span>
           )}
         </div>
