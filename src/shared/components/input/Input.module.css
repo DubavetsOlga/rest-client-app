@@ -6,15 +6,15 @@
 .input {
   width: 100%;
   padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #d9d9d9;
-  border-radius: 6px;
-  background-color: white;
-  color: black;
+  font-size: var(--font-size-base);
+  border: var(--border-size) solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 .input:focus {
-  outline: 2px solid #000000;
+  outline: 2px solid var(--color-black);
 }
 
 .togglePassword {
@@ -43,9 +43,9 @@
 }
 
 .error {
-  color: #9b1313;
-  font-size: 0.75rem;
   margin-top: 0.25rem;
+  color: var(--color-error-500);
+  font-size: var(--font-size-sm);
   font-weight: normal;
 }
 

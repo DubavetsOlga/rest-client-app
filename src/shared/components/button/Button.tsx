@@ -3,7 +3,7 @@ import s from './Button.module.css';
 import { Link } from '@/shared/i18n/routing';
 
 type Props = {
-  variant?: 'primary' | 'secondary' | 'text';
+  variant?: 'primary' | 'secondary';
   className?: string;
   children: ReactNode;
 } & (
