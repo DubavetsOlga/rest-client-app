@@ -2,9 +2,8 @@
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  background-color: white;
-  color: black;
+  background-color: var(--color-white);
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #d9d9d9;
+  border-top: var(--border-size) solid var(--border-color);
 }
