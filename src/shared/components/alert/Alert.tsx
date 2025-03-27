@@ -2,13 +2,12 @@
 
 import { Flip, ToastContainer, ToastContainerProps } from 'react-toastify';
 import { ReactElement } from 'react';
-import Image from 'next/image';
-import close from '../../../assets/close.svg';
+import { X } from 'lucide-react';
 
 export const Alert = (props: ToastContainerProps): ReactElement => {
   return (
     <ToastContainer
-      closeButton={() => <Image src={close} alt="close" />}
+      closeButton={() => <X />}
       closeOnClick={true}
       hideProgressBar
       position={'top-center'}
