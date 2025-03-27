@@ -12,6 +12,7 @@ import { toast } from 'react-toastify';
 import { FirebaseError } from '@firebase/util';
 import { signIn } from '@/features/login/signIn';
 import { Card, Input, Button } from '@/shared/components';
+import s from './LoginForm.module.css';
 
 export const LoginForm = () => {
   const locale = useLocale();
@@ -51,7 +52,7 @@ export const LoginForm = () => {
         <Button type="submit" disabled={!isValid}>
           {basic.signIn}
         </Button>
-        <p>
+        <p className={s.registrationLink}>
           {auth.doNotHaveAccount}&nbsp;
           <Link href={REGISTRATION}>{basic.signUp}</Link>
         </p>

@@ -1,0 +1,5 @@
+.loginLink {
+  margin-top: 0.5rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-800);
+}

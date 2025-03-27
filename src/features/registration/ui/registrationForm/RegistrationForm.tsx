@@ -12,6 +12,7 @@ import {
 } from '@/features/registration/hooks/useRegistrationForm';
 import { createUser } from '@/features/registration/createUser';
 import { Card, Input, Button } from '@/shared/components';
+import s from './RegistrationForm.module.css';
 
 export const RegistrationForm = () => {
   const locale = useLocale();
@@ -68,7 +69,7 @@ export const RegistrationForm = () => {
         <Button type="submit" disabled={!isValid}>
           {auth.createAccount}
         </Button>
-        <p>
+        <p className={s.loginLink}>
           {auth.haveAccount}&nbsp;
           <Link href={LOGIN}>{basic.signIn}</Link>
         </p>
