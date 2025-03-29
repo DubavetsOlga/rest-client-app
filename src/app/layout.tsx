@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { ReactElement, ReactNode } from 'react';
 import StoreProvider from '@/shared/providers/storeProviders';
+import { AppErrorBoundary } from '@/shared/components';
 
 export const metadata: Metadata = {
   title: 'REST Client App',
@@ -22,9 +23,13 @@ export default async function LocaleLayout({
 }>): Promise<ReactElement> {
   return (
     <html lang="en">
-      <body>
-        <StoreProvider>{children}</StoreProvider>
-      </body>
+    <body>
+    <AppErrorBoundary>
+      <StoreProvider>
+        {children}
+      </StoreProvider>
+    </AppErrorBoundary>
+    </body>
     </html>
   );
 }
