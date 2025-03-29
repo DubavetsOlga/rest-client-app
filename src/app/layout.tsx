@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ReactElement, ReactNode } from 'react';
+import StoreProvider from '@/shared/providers/storeProviders';
 
 export const metadata: Metadata = {
   title: 'REST Client App',
@@ -15,16 +16,15 @@ export const metadata: Metadata = {
 };
 
 export default async function LocaleLayout({
-                                             children,
-                                           }: Readonly<{
+  children,
+}: Readonly<{
   children: ReactNode;
 }>): Promise<ReactElement> {
-
   return (
     <html lang="en">
-    <body>
-    {children}
-    </body>
+      <body>
+        <StoreProvider>{children}</StoreProvider>
+      </body>
     </html>
   );
 }
