@@ -3,6 +3,7 @@ import './globals.css';
 import { ReactElement, ReactNode } from 'react';
 import StoreProvider from '@/shared/providers/storeProviders';
 import { AppErrorBoundary } from '@/shared/components';
+import { Alert } from '@/shared/components';
 
 export const metadata: Metadata = {
   title: 'REST Client App',
@@ -27,6 +28,7 @@ export default async function LocaleLayout({
     <AppErrorBoundary>
       <StoreProvider>
         {children}
+        <Alert />
       </StoreProvider>
     </AppErrorBoundary>
     </body>
