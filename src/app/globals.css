@@ -81,7 +81,14 @@ a {
 }
 
 a:hover {
-  color: var(--color-info-500);
+    color: var(--color-info-500);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 18rem;
 }
 
 /* Toastify */

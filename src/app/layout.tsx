@@ -4,6 +4,7 @@ import { ReactElement, ReactNode } from 'react';
 import StoreProvider from '@/shared/providers/storeProviders';
 import { AppErrorBoundary } from '@/shared/components';
 import { Alert } from '@/shared/components';
+import { AuthProvider } from '@/shared/providers/authProvider';
 
 export const metadata: Metadata = {
   title: 'REST Client App',
@@ -22,14 +23,17 @@ export default async function LocaleLayout({
 }: Readonly<{
   children: ReactNode;
 }>): Promise<ReactElement> {
+
   return (
     <html lang="en">
     <body>
     <AppErrorBoundary>
-      <StoreProvider>
-        {children}
-        <Alert />
-      </StoreProvider>
+      <AuthProvider>
+        <StoreProvider>
+          {children}
+          <Alert />
+        </StoreProvider>
+      </AuthProvider>
     </AppErrorBoundary>
     </body>
     </html>
