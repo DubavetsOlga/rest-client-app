@@ -1,6 +1,5 @@
 'use client';
 
-import logo from '../../../public/favicon.png';
 import Image from 'next/image';
 import { Link } from '@/shared/i18n/routing';
 import s from './Header.module.css';
@@ -18,7 +17,7 @@ import { useAuthContext } from '@/shared/hooks/useAuthContext';
 export const Header = () => {
   const locale = useLocale();
   const { basic: t } = translate(locale);
-  const { isAuth } = useAuthContext();
+  const { isAuth, loading } = useAuthContext();
   const [isSticky, setIsSticky] = useState(false);
 
   const handleLogout = async () => {
@@ -45,28 +44,33 @@ export const Header = () => {
     <header className={`${s.header} ${isSticky ? s.sticky : ''}`}>
       <div className={s.logo}>
         <Link href="/">
-          <Image src={logo} priority alt="Logo" width={50} height={50} />
+          <Image
+            src="/favicon.png"
+            priority
+            alt="Logo"
+            width={50}
+            height={50}
+          />
         </Link>
         <h2 className={s.title}>REST Client</h2>
       </div>
-      <div className={s.actions}>
-        <LocaleSwitcher />
-        {isAuth ? (
-          <>
-            <Button href="/">Main</Button>
+      {!loading && (
+        <div className={s.actions}>
+          <LocaleSwitcher />
+          {isAuth ? (
             <Button onClick={handleLogout} variant="secondary">
               {t.signOut}
             </Button>
-          </>
-        ) : (
-          <>
-            <Button href={LOGIN}>{t.signIn}</Button>
-            <Button href={REGISTRATION} variant="secondary">
-              {t.signUp}
-            </Button>
-          </>
-        )}
-      </div>
+          ) : (
+            <>
+              <Button href={LOGIN}>{t.signIn}</Button>
+              <Button href={REGISTRATION} variant="secondary">
+                {t.signUp}
+              </Button>
+            </>
+          )}
+        </div>
+      )}
     </header>
   );
 };

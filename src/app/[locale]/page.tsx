@@ -26,7 +26,7 @@ export default function MainPage() {
 
   return (
     <div className={s.mainContainer}>
-      <h1>
+      <h1 className={s.welcome}>
         {isAuth ? `${mainPage.welcomeBack} ${userName}!` : mainPage.welcome}
       </h1>
       <div className={s.aboutContainer}>

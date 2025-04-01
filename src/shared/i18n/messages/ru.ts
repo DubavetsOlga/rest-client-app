@@ -7,7 +7,8 @@ export const ru: LanguagesObjType = {
     signOut: 'Выйти',
     restClient: 'REST Клиент',
     variables: 'Переменные',
-    history: 'История запросов',
+    history: 'История',
+    main: 'Главная',
     unexpectedError: 'Произошла неожиданная ошибка.',
   },
   mainPage: {

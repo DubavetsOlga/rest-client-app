@@ -6,6 +6,7 @@ export const en = {
     restClient: 'REST Client',
     variables: 'Variables',
     history: 'History',
+    main: 'Main',
     unexpectedError: 'An unexpected error occurred.',
   },
   mainPage: {
