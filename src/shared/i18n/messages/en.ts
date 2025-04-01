@@ -8,6 +8,8 @@ export const en = {
     history: 'History',
     main: 'Main',
     unexpectedError: 'An unexpected error occurred.',
+    yes: 'Yes',
+    no: 'No',
   },
   mainPage: {
     welcome: 'Welcome',
@@ -27,8 +29,14 @@ export const en = {
     createAccount: 'Create Account',
   },
   historyPage: {
-    title: 'History',
-    emptyHistory: "You haven't executed any requests. It's empty here. Try:",
+    title: 'History Requests',
+    noRequests: "You haven't executed any requests.",
+    empty: "It's empty here. Try:",
+    deleteRequest: 'Delete request',
+    clearHistory: 'Clear History',
+    confirmRemoval: 'Confirm Removal',
+    confirmClearHistory: 'Are you sure you want to clear history?',
+    confirmRemoveItem: 'Are you sure you want to remove this item?',
   },
   variablesPage: {
     title: 'Variables',
@@ -51,6 +59,11 @@ export const en = {
     Timofei: 'Timofei Naryshkin',
     Polina: 'Polina Ryabova',
     frontendDeveloper: 'Frontend Developer',
+  },
+  errors: {
+    readError: 'Failed to load data',
+    saveError: 'Failed to save data',
+    deleteError: 'Failed to delete data',
   },
 };
 

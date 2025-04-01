@@ -10,6 +10,8 @@ export const ru: LanguagesObjType = {
     history: 'История',
     main: 'Главная',
     unexpectedError: 'Произошла неожиданная ошибка.',
+    yes: 'Да',
+    no: 'Нет',
   },
   mainPage: {
     welcome: 'Добро пожаловать',
@@ -30,7 +32,13 @@ export const ru: LanguagesObjType = {
   },
   historyPage: {
     title: 'История запросов',
-    emptyHistory: 'Вы не выполнили ни одного запроса. Здесь пусто. Попробуйте:',
+    noRequests: 'Вы не выполнили ни одного запроса.',
+    empty: 'Здесь пусто. Попробуйте:',
+    deleteRequest: 'Удалить запрос',
+    clearHistory: 'Очистить историю',
+    confirmRemoval: 'Подтвердить удаление',
+    confirmClearHistory: 'Вы уверены, что хотите очистить историю?',
+    confirmRemoveItem: 'Вы уверены, что хотите удалить этот запрос?',
   },
   variablesPage: {
     title: 'Переменные',
@@ -53,5 +61,10 @@ export const ru: LanguagesObjType = {
     Timofei: 'Тимофей Нарышкин',
     Polina: 'Полина Рябова',
     frontendDeveloper: 'Frontend Разработчик',
+  },
+  errors: {
+    readError: 'Не удалось загрузить данные',
+    saveError: 'Не удалось сохранить данные',
+    deleteError: 'Не удалось удалить данные',
   },
 };

@@ -1,0 +1,24 @@
+.historyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.historyHeader {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.deleteButton {
+  cursor: pointer;
+}
