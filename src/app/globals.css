@@ -70,9 +70,8 @@ body {
 
 main {
   display: flex;
-  justify-content: center;
   flex-grow: 1;
-  padding: 1rem;
+  margin: 1rem 0.25rem;
 }
 
 a {
@@ -81,7 +80,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-info-500);
+  color: var(--color-info-500);
 }
 
 form {
