@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import variablesReducer from './reducers/VariablesSlice';
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {},
+    reducer: {
+      variablesReducer,
+    },
   });
 };
 

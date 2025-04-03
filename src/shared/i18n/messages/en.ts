@@ -32,6 +32,10 @@ export const en = {
   },
   variablesPage: {
     title: 'Variables',
+    tableTitle: 'Variable',
+    tableValue: 'Value',
+    variableNamePlaceholder: 'Add new variable',
+    variablesFilterPlaceholder: 'Filter variables'
   },
   clientPage: {},
   errorPage: {
@@ -51,6 +55,11 @@ export const en = {
     Timofei: 'Timofei Naryshkin',
     Polina: 'Polina Ryabova',
     frontendDeveloper: 'Frontend Developer',
+  },
+  errors: {
+    readError: 'Failed to load data',
+    saveError: 'Failed to save data',
+    deleteError: 'Failed to delete data',
   },
 };
 

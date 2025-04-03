@@ -1,0 +1,29 @@
+.input {
+  width: 90%;
+  background-color: transparent;
+  border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius);
+  padding: 0.4rem;
+  outline: none;
+}
+
+.input:focus {
+  background-color: var(--color-white);
+}
+
+.input-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: var(--color-variable-input-1);
+}
+
+.created {
+  cursor: pointer;
+}
+
+.remove-icon {
+  width: 25px;
+  height: 20px;
+}

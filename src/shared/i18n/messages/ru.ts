@@ -34,6 +34,10 @@ export const ru: LanguagesObjType = {
   },
   variablesPage: {
     title: 'Переменные',
+    tableTitle: 'Переменная',
+    tableValue: 'Значение',
+    variableNamePlaceholder: 'Добавить новую переменную',
+    variablesFilterPlaceholder: 'Фильтровать переменные'
   },
   clientPage: {},
   errorPage: {
@@ -53,5 +57,10 @@ export const ru: LanguagesObjType = {
     Timofei: 'Тимофей Нарышкин',
     Polina: 'Полина Рябова',
     frontendDeveloper: 'Frontend Разработчик',
+  },
+  errors: {
+    readError: 'Не удалось загрузить данные',
+    saveError: 'Не удалось сохранить данные',
+    deleteError: 'Не удалось удалить данные',
   },
 };
