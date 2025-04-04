@@ -8,11 +8,11 @@ import {
   useLoginForm,
 } from '@/features/login/hooks/useLoginForm';
 import { REGISTRATION } from '@/shared/models/routes';
-import { toast } from 'react-toastify';
-import { FirebaseError } from '@firebase/util';
 import { signIn } from '@/features/login/signIn';
 import { Card, Input, Button } from '@/shared/components';
 import s from './LoginForm.module.css';
+import { useState } from 'react';
+import { useFirebaseErrorHandler } from '@/shared/hooks/useFirebaseErrorHandler';
 
 export const LoginForm = () => {
   const locale = useLocale();
@@ -24,11 +24,15 @@ export const LoginForm = () => {
     formState: { errors, isValid },
   } = useLoginForm();
 
+  const { handleFirebaseError } = useFirebaseErrorHandler();
+  const [firebaseError, setFirebaseError] = useState<string | null>(null);
+
   const onSubmit = async (data: LoginFormValues) => {
     try {
+      setFirebaseError(null);
       await signIn(data.email, data.password);
     } catch (error) {
-      toast.error((error as FirebaseError).message || basic.unexpectedError);
+      handleFirebaseError(error, { setError: setFirebaseError });
     }
   };
 
@@ -49,6 +53,7 @@ export const LoginForm = () => {
           error={errors.password?.message}
           {...register('password')}
         />
+        {firebaseError && <div className={s.errorMessage}>{firebaseError}</div>}
         <Button type="submit" disabled={!isValid}>
           {basic.signIn}
         </Button>

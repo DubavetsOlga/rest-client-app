@@ -10,6 +10,8 @@ export const ru: LanguagesObjType = {
     history: 'История',
     main: 'Главная',
     unexpectedError: 'Произошла неожиданная ошибка.',
+    menu: 'Меню',
+    language: 'Язык',
   },
   mainPage: {
     welcome: 'Добро пожаловать',
@@ -53,5 +55,16 @@ export const ru: LanguagesObjType = {
     Timofei: 'Тимофей Нарышкин',
     Polina: 'Полина Рябова',
     frontendDeveloper: 'Frontend Разработчик',
+  },
+  firebase: {
+    invalidCredential: 'Неверные учетные данные',
+    userNotFound: 'Пользователь с таким email не найден',
+    wrongPassword: 'Неверный пароль',
+    defaultError: 'Что-то пошло не так',
+    invalidEmail: 'Некорректный формат email',
+    emailInUse: 'Этот email уже зарегистрирован',
+    tooManyRequests: 'Слишком много попыток входа. Попробуйте позже',
+    networkRequestFailed: 'Нет подключения к интернету',
+    internalError: 'Ошибка сервера Firebase',
   },
 };

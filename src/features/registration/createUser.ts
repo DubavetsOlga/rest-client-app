@@ -15,4 +15,6 @@ export const createUser = async ({
   await updateProfile(user.user, {
     displayName: name,
   });
+
+  return user.user.displayName;
 };

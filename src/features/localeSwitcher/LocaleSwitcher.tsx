@@ -3,9 +3,17 @@
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { ReactElement, useState } from 'react';
+import s from './LocaleSwitcher.module.css';
+import { translate } from '@/shared/i18n/langSwitcher';
+
+const languages = [
+  { value: 'en', label: 'EN' },
+  { value: 'ru', label: 'RU' },
+];
 
 export const LocaleSwitcher = (): ReactElement => {
   const locale = useLocale();
+  const { basic: t } = translate(locale);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -18,14 +26,17 @@ export const LocaleSwitcher = (): ReactElement => {
   };
 
   return (
-    <div>
-      <select
-        value={language}
-        onChange={(e) => handleClickChangeLang(e.target.value)}
-      >
-        <option value="en">EN</option>
-        <option value="ru">RU</option>
-      </select>
-    </div>
+    <select
+      value={language}
+      onChange={(e) => handleClickChangeLang(e.target.value)}
+      className={s.select}
+      aria-label={t.language}
+    >
+      {languages.map((lang) => (
+        <option key={lang.value} value={lang.value}>
+          {lang.label}
+        </option>
+      ))}
+    </select>
   );
 };

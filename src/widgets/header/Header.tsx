@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Link } from '@/shared/i18n/routing';
 import s from './Header.module.css';
-import { LocaleSwitcher } from '@/features/localeSwitcher/localeSwitcher';
+import { LocaleSwitcher } from '@/features/localeSwitcher/LocaleSwitcher';
 import { useLocale } from 'use-intl';
 import { translate } from '@/shared/i18n/langSwitcher';
 import { FirebaseError } from '@firebase/util';

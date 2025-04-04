@@ -1,9 +1,24 @@
 .footer {
   display: flex;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: var(--color-white);
   justify-content: space-between;
   align-items: center;
   border-top: var(--border-size) solid var(--border-color);
+}
+
+.gitContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.gitDevLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.devLink {
+  font-size: var(--font-size-sm);
 }

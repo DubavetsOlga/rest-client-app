@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   transition: all var(--transition-default);
+  z-index: 1000;
 }
 
 .sticky {
@@ -39,5 +40,9 @@
 
   .title {
     display: none;
+  }
+
+  .actions {
+    gap: 0.5rem;
   }
 }

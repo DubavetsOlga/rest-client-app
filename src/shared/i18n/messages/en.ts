@@ -8,6 +8,8 @@ export const en = {
     history: 'History',
     main: 'Main',
     unexpectedError: 'An unexpected error occurred.',
+    menu: 'Menu',
+    language: 'Language',
   },
   mainPage: {
     welcome: 'Welcome',
@@ -51,6 +53,17 @@ export const en = {
     Timofei: 'Timofei Naryshkin',
     Polina: 'Polina Ryabova',
     frontendDeveloper: 'Frontend Developer',
+  },
+  firebase: {
+    invalidCredential: 'Invalid Credential',
+    userNotFound: 'No user found with this email',
+    wrongPassword: 'Incorrect password',
+    defaultError: 'Something went wrong',
+    invalidEmail: 'Email address is malformed',
+    emailInUse: 'Email is already registered',
+    tooManyRequests: 'Too many failed login attempts',
+    networkRequestFailed: 'No internet connection',
+    internalError: 'Firebase server issue',
   },
 };
 
