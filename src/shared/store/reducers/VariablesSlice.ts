@@ -1,17 +1,14 @@
+import { Variable } from '@/shared/models/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface VariablesState {
+type VariablesState = {
   variables: Variable[];
-}
-
-export interface Variable {
-  id: string;
-  key: string;
-  value: string;
-}
+  isStored: boolean;
+};
 
 const initialState: VariablesState = {
   variables: [],
+  isStored: false,
 };
 
 export const variablesSlice = createSlice({
@@ -20,6 +17,7 @@ export const variablesSlice = createSlice({
   reducers: {
     setVariables(state, action: PayloadAction<Variable[]>) {
       state.variables = action.payload;
+      state.isStored = true;
     },
     createVariable(state, action: PayloadAction<Variable>) {
       state.variables.push(action.payload);
@@ -35,10 +33,19 @@ export const variablesSlice = createSlice({
       );
       state.variables.splice(index, 1, action.payload);
     },
+    clearVariables(state) {
+      state.variables = [];
+      state.isStored = false;
+    },
   },
 });
 
-export const { setVariables, createVariable, removeVariable, editVariable } =
-  variablesSlice.actions;
+export const {
+  setVariables,
+  createVariable,
+  removeVariable,
+  editVariable,
+  clearVariables,
+} = variablesSlice.actions;
 
 export default variablesSlice.reducer;

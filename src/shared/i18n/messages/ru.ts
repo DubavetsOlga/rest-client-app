@@ -37,6 +37,7 @@ export const ru: LanguagesObjType = {
     tableTitle: 'Переменная',
     tableValue: 'Значение',
     variableNamePlaceholder: 'Добавить новую переменную',
+    variableValuePlaceholder: 'Добавить значение',
     variablesFilterPlaceholder: 'Фильтровать переменные'
   },
   clientPage: {},

@@ -7,29 +7,21 @@ import { VariableItem } from '../variableItem/VariableItem';
 import { useAppSelector } from '@/shared/store/hooks/useAppSelector';
 import { useEffect, useMemo, useState } from 'react';
 import { useLocalStorage } from '@/shared/hooks/useLocalStorage';
-import { setVariables, Variable } from '@/shared/store/reducers/VariablesSlice';
-import { useAppDispatch } from '@/shared/store/hooks/useAppDispatch';
-import { VariablesListHeader } from '../variablesListHeader/variablesListHeader';
+import { Variable } from '@/shared/models/types';
+import { VariablesListHeader } from '../variablesListHeader/VariablesListHeader';
+
+const STORAGE_KEY = 'variables';
 
 export const VariablesList = () => {
   const locale = useLocale();
   const { variablesPage: t } = translate(locale);
-
-  const { variables } = useAppSelector((state) => state.variablesReducer);
-  const dispatch = useAppDispatch();
-
-  const { getStorageItem, setStorageItem } = useLocalStorage<Variable[]>();
-  const [isStored, setIsStored] = useState(false);
+  const { variables, isStored } = useAppSelector((state) => state.variablesReducer);
+  const { setStorageItem } = useLocalStorage<Variable[]>();
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    dispatch(setVariables(getStorageItem('variables', [])));
-    setIsStored(true);
-  }, [dispatch, getStorageItem]);
-
-  useEffect(() => {
     if (variables.length || isStored) {
-      setStorageItem('variables', variables);
+      setStorageItem(STORAGE_KEY, variables);
     }
   }, [variables, isStored, setStorageItem]);
 
@@ -53,9 +45,7 @@ export const VariablesList = () => {
             <VariableItem
               className={`${s.item} ${isEven ? s.even : ''}`}
               key={variable.id}
-              itemId={variable.id}
-              itemKey={variable.key}
-              itemValue={variable.value}
+              variable={variable}
               itemCreated={true}
             />
           );

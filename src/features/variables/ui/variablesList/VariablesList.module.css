@@ -18,11 +18,11 @@
 .item {
   display: grid;
   grid-template-columns: 1fr 1.5fr 40px;
-  gap: 1px;
+  gap: 2px;
 }
 
 .even > div {
-  background-color: var(--color-variable-input-2);
+  background-color: var(--color-gray-300);
 }
 
 .header {

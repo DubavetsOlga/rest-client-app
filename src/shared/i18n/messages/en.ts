@@ -35,6 +35,7 @@ export const en = {
     tableTitle: 'Variable',
     tableValue: 'Value',
     variableNamePlaceholder: 'Add new variable',
+    variableValuePlaceholder: 'Add value',
     variablesFilterPlaceholder: 'Filter variables'
   },
   clientPage: {},

@@ -1,5 +1,5 @@
 .input {
-  width: 90%;
+  width: 100%;
   background-color: transparent;
   border: var(--border-size) solid transparent;
   border-radius: var(--border-radius);
@@ -12,18 +12,9 @@
 }
 
 .input-container {
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 40px;
-  background-color: var(--color-variable-input-1);
-}
-
-.created {
-  cursor: pointer;
-}
-
-.remove-icon {
-  width: 25px;
-  height: 20px;
+  padding: 0.3rem;
+  background-color: var(--color-gray-200);
 }
