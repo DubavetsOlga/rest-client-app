@@ -45,7 +45,7 @@ export const Header = () => {
       <div className={s.logo}>
         <Link href="/">
           <Image
-            src="/favicon.png"
+            src="/logo.png"
             priority
             alt="Logo"
             width={50}
