@@ -1,14 +1,17 @@
 import { translate } from '@/shared/i18n/langSwitcher';
-import s from './variablesListHeader.module.css';
+import s from './VariablesListHeader.module.css';
 import { useLocale } from 'next-intl';
-import { ChangeEvent } from 'react';
+import { ChangeEvent, memo } from 'react';
 
 type Props = {
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const VariablesListHeader = ({ value, onChange }: Props) => {
+export const VariablesListHeader = memo(function VariablesListHeader({
+  value,
+  onChange,
+}: Props) {
   const locale = useLocale();
   const { variablesPage: t } = translate(locale);
 
@@ -28,4 +31,4 @@ export const VariablesListHeader = ({ value, onChange }: Props) => {
       <div className={s['head-item']}></div>
     </div>
   );
-};
+});

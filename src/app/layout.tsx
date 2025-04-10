@@ -23,19 +23,18 @@ export default async function LocaleLayout({
 }: Readonly<{
   children: ReactNode;
 }>): Promise<ReactElement> {
-
   return (
     <html lang="en">
-    <body>
-    <AppErrorBoundary>
-      <AuthProvider>
-        <StoreProvider>
-          {children}
-          <Alert />
-        </StoreProvider>
-      </AuthProvider>
-    </AppErrorBoundary>
-    </body>
+      <body>
+        <AppErrorBoundary>
+          <AuthProvider>
+            <StoreProvider>
+              {children}
+              <Alert />
+            </StoreProvider>
+          </AuthProvider>
+        </AppErrorBoundary>
+      </body>
     </html>
   );
 }

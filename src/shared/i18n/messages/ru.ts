@@ -10,6 +10,8 @@ export const ru: LanguagesObjType = {
     history: 'История',
     main: 'Главная',
     unexpectedError: 'Произошла неожиданная ошибка.',
+    yes: 'Да',
+    no: 'Нет',
   },
   mainPage: {
     welcome: 'Добро пожаловать',
@@ -36,9 +38,13 @@ export const ru: LanguagesObjType = {
     title: 'Переменные',
     tableTitle: 'Переменная',
     tableValue: 'Значение',
+    confirmRemoval: 'Подтвердить удаление',
+    confirmRemoveItem: 'Вы уверены, что хотите удалить эту переменную?',
+    variableOverwriteTooltip:
+      'Эта переменная перезапишет существующую с таким же ключом',
     variableNamePlaceholder: 'Добавить новую переменную',
     variableValuePlaceholder: 'Добавить значение',
-    variablesFilterPlaceholder: 'Фильтровать переменные'
+    variablesFilterPlaceholder: 'Фильтровать переменные',
   },
   clientPage: {},
   errorPage: {

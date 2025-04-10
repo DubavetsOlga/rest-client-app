@@ -8,6 +8,8 @@ export const en = {
     history: 'History',
     main: 'Main',
     unexpectedError: 'An unexpected error occurred.',
+    yes: 'Yes',
+    no: 'No',
   },
   mainPage: {
     welcome: 'Welcome',
@@ -34,9 +36,13 @@ export const en = {
     title: 'Variables',
     tableTitle: 'Variable',
     tableValue: 'Value',
+    confirmRemoval: 'Confirm Removal',
+    confirmRemoveItem: 'Are you sure you want to remove this variable?',
+    variableOverwriteTooltip:
+      'This variable will overwrite an existing one with the same key',
     variableNamePlaceholder: 'Add new variable',
     variableValuePlaceholder: 'Add value',
-    variablesFilterPlaceholder: 'Filter variables'
+    variablesFilterPlaceholder: 'Filter variables',
   },
   clientPage: {},
   errorPage: {

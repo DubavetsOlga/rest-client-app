@@ -1,54 +1,71 @@
 import { translate } from '@/shared/i18n/langSwitcher';
 import { useLocale } from 'next-intl';
-import { useState } from 'react';
+import { ChangeEvent, memo, useRef, useState } from 'react';
 import s from './VariableItem.module.css';
 import { useAppDispatch } from '@/shared/store/hooks/useAppDispatch';
 import {
   editVariable,
-  removeVariable,
   createVariable,
 } from '@/shared/store/reducers/VariablesSlice';
-import { Trash2 } from 'lucide-react';
+import { Trash2, TriangleAlert } from 'lucide-react';
 import { Variable } from '@/shared/models/types';
+import { useAppSelector } from '@/shared/store/hooks/useAppSelector';
 
 type Props = {
   variable?: Variable;
   itemCreated?: boolean;
+  onRemove?: (id: string) => void;
   className: string;
 };
 
-export const VariableItem = ({
+const ALERT_ICON_COLOR = 'rgb(173, 122, 3)';
+
+export const VariableItem = memo(function VariableItem({
   variable = {
     id: crypto.randomUUID(),
     key: '',
-    value: ''
+    value: '',
   },
   itemCreated = false,
   className,
-}: Props) => {
+  onRemove,
+}: Props) {
   const locale = useLocale();
   const { variablesPage: t } = translate(locale);
-
-  const [item, setItem] = useState(variable)
+  const [item, setItem] = useState(variable);
   const [isCreated] = useState(itemCreated);
-
+  const [willOverwrite, setWillOverwrite] = useState(false);
   const dispatch = useAppDispatch();
-
-  const remove = () => dispatch(removeVariable(item.id));
-  const edit = (val: Variable) => dispatch(editVariable(val))
+  const { variables } = useAppSelector((state) => state.variablesReducer);
 
   const create = () => {
     const trimmedKey = item.key.trim();
     const trimmedValue = item.value.trim();
-    setItem({ ...item, key: trimmedKey, value: trimmedValue })
+    setItem({ ...item, key: trimmedKey, value: trimmedValue });
     if (trimmedKey && trimmedValue && !isCreated) {
-      dispatch(createVariable({ id: item.id, key: trimmedKey, value: trimmedValue }));
-      setItem({ id: crypto.randomUUID(), key: '', value: '' })
+      dispatch(
+        createVariable({ id: item.id, key: trimmedKey, value: trimmedValue })
+      );
+      setItem({ id: crypto.randomUUID(), key: '', value: '' });
+      setWillOverwrite(false);
     }
     if (isCreated) {
-      edit({ ...item, key: trimmedKey, value: trimmedValue });
+      dispatch(editVariable({ ...item, key: trimmedKey, value: trimmedValue }));
+      setWillOverwrite(false);
     }
-  }
+  };
+
+  const handleKeyChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setItem({ ...item, key: e.target.value });
+    const sameKeyVariable = variables.find(
+      (variable) => variable.key === e.target.value
+    );
+    if (!sameKeyVariable || sameKeyVariable.id === item.id) {
+      setWillOverwrite(false);
+      return;
+    }
+    setWillOverwrite(true);
+  };
 
   return (
     <div className={className} onBlur={create}>
@@ -57,8 +74,18 @@ export const VariableItem = ({
           className={s.input}
           placeholder={t.variableNamePlaceholder}
           value={item.key}
-          onChange={(e) => setItem({ ...item, key: e.target.value })}
+          onChange={handleKeyChange}
         />
+        {willOverwrite && (
+          <div className={s.tooltip}>
+            <TriangleAlert
+              className={s['alert-icon']}
+              size={20}
+              color={ALERT_ICON_COLOR}
+            />
+            <i className={s['tooltip-text']}>{t.variableOverwriteTooltip}</i>
+          </div>
+        )}
       </div>
       <div className={s['input-container']}>
         <input
@@ -68,11 +95,15 @@ export const VariableItem = ({
           onChange={(e) => setItem({ ...item, value: e.target.value })}
         />
       </div>
-      <div
-        className={s['input-container']}
-      >
-        {isCreated && <Trash2 size={20} cursor={'pointer'} onClick={remove} />}
+      <div className={s['input-container']}>
+        {isCreated && (
+          <Trash2
+            size={20}
+            cursor={'pointer'}
+            onClick={onRemove ? () => onRemove(item.id) : undefined}
+          />
+        )}
       </div>
     </div>
   );
-};
+});

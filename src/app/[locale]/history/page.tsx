@@ -15,9 +15,10 @@ export default function History() {
   }
 
   return (
-    isAuth &&
-    <div>
-      <h2>{historyPage.title}</h2>
-    </div>
+    isAuth && (
+      <div>
+        <h2>{historyPage.title}</h2>
+      </div>
+    )
   );
 }

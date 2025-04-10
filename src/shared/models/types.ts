@@ -3,3 +3,5 @@ export type Variable = {
   key: string;
   value: string;
 };
+
+export type DialogType = 'clear' | 'item' | null;
