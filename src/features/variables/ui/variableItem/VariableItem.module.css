@@ -46,7 +46,7 @@
   bottom: 1rem;
   transition: all var(--transition-default);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-gray-200);
+  background-color: var(--color-gray-100);
   padding: 0.3rem;
   border-radius: var(--border-radius);
 }
