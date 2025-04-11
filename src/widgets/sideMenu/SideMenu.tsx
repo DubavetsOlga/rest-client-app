@@ -8,8 +8,8 @@ import {
   CloudFog,
   ListX,
   History,
-  PanelRightClose,
-  PanelRightOpen,
+  ChevronRight,
+  ChevronLeft,
   Menu,
   X,
   Home,
@@ -69,37 +69,48 @@ export default function SideMenu() {
 
   return (
     <>
-      <button className={s.menuToggle} onClick={toggleMenu}>
+      <button className={s.menuToggle} onClick={toggleMenu} aria-label={t.menu}>
         {isOpen ? <X /> : <Menu />}
       </button>
       <nav
         className={`${s.sideMenu} ${isOpen ? s.open : ''} ${isShort ? s.short : ''}`}
         onClick={() => setIsOpen(false)}
       >
-        <div className={s.menuHeader}>
-          <button onClick={toggleWidth} className={s.toggleWidthButton}>
-            {isShort ? (
-              <PanelRightClose size={18} />
-            ) : (
-              <PanelRightOpen size={18} />
-            )}
-          </button>
-        </div>
-        <ul className={s.menuList}>
-          {menuItems.map((item) => (
-            <li
-              key={item.href}
-              className={`${s.menuItem} ${isActive(item.href) ? s.active : ''}`}
+        <div className={s.menuContainer}>
+          <div className={isShort ? s.menuHeaderShort : s.menuHeader}>
+            <button
+              onClick={toggleWidth}
+              className={s.toggleWidthButton}
+              aria-label={t.menu}
             >
-              <Link href={item.href} className={s.menuLink}>
-                {item.icon}
-                <span className={`${isShort ? s.shortMenuLink : ''}`}>
-                  {item.text}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+              {isShort ? (
+                <ChevronRight />
+              ) : (
+                <ChevronLeft />
+              )}
+            </button>
+          </div>
+          <ul className={s.menuList}>
+            {menuItems.map((item) => (
+              <li
+                key={item.href}
+                className={`${s.menuItem} ${isActive(item.href) ? s.active : ''}`}
+                title={isShort ? item.text : ''}
+              >
+                <Link
+                  href={item.href}
+                  className={s.menuLink}
+                  aria-label={item.text}
+                >
+                  {item.icon}
+                  <span className={`${isShort ? s.shortMenuLink : ''}`}>
+                    {item.text}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
     </>
   );
