@@ -78,11 +78,6 @@ export const ru: LanguagesObjType = {
     saveError: 'Не удалось сохранить данные',
     deleteError: 'Не удалось удалить данные',
   },
-  errors: {
-    readError: 'Не удалось загрузить данные',
-    saveError: 'Не удалось сохранить данные',
-    deleteError: 'Не удалось удалить данные',
-  },
   firebase: {
     invalidCredential: 'Неверные учетные данные',
     userNotFound: 'Пользователь с таким email не найден',
