@@ -1,12 +1,12 @@
 import { translate } from '@/shared/i18n/langSwitcher';
 import { useLocale } from 'next-intl';
-import { ChangeEvent, memo, useRef, useState } from 'react';
+import { ChangeEvent, memo, useState } from 'react';
 import s from './VariableItem.module.css';
 import { useAppDispatch } from '@/shared/store/hooks/useAppDispatch';
 import {
   editVariable,
   createVariable,
-} from '@/shared/store/reducers/VariablesSlice';
+} from '@/shared/store/reducers/variablesSlice';
 import { Trash2, TriangleAlert } from 'lucide-react';
 import { Variable } from '@/shared/models/types';
 import { useAppSelector } from '@/shared/store/hooks/useAppSelector';
@@ -15,10 +15,7 @@ type Props = {
   variable?: Variable;
   itemCreated?: boolean;
   onRemove?: (id: string) => void;
-  className: string;
 };
-
-const ALERT_ICON_COLOR = 'rgb(173, 122, 3)';
 
 export const VariableItem = memo(function VariableItem({
   variable = {
@@ -27,7 +24,6 @@ export const VariableItem = memo(function VariableItem({
     value: '',
   },
   itemCreated = false,
-  className,
   onRemove,
 }: Props) {
   const locale = useLocale();
@@ -68,7 +64,7 @@ export const VariableItem = memo(function VariableItem({
   };
 
   return (
-    <div className={className} onBlur={create}>
+    <div className={s.item} onBlur={create}>
       <div className={s['input-container']}>
         <input
           className={s.input}
@@ -81,7 +77,7 @@ export const VariableItem = memo(function VariableItem({
             <TriangleAlert
               className={s['alert-icon']}
               size={20}
-              color={ALERT_ICON_COLOR}
+              color='var(--color-warning-500)'
             />
             <i className={s['tooltip-text']}>{t.variableOverwriteTooltip}</i>
           </div>

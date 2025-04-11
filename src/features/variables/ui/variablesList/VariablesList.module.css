@@ -5,6 +5,15 @@
   max-width: 706px;
   width: 90%;
   overflow-y: scroll;
+  background-color: var(--color-gray-200);
+}
+
+.list > div:nth-of-type(odd):not(:first-of-type) {
+  background-color: var(--color-gray-300);
+}
+
+.list > div:not(:first-of-type):hover {
+  background-color: var(--color-gray-400);
 }
 
 .container {
@@ -13,16 +22,6 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-}
-
-.item {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 40px;
-  gap: 1px;
-}
-
-.even > div {
-  background-color: var(--color-gray-300);
 }
 
 .header {

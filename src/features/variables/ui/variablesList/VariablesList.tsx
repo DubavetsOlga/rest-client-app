@@ -11,7 +11,7 @@ import { DialogType, Variable } from '@/shared/models/types';
 import { VariablesListHeader } from '../variablesListHeader/VariablesListHeader';
 import { ConfirmDialog } from '@/shared/components/confirmDialog/ConfirmDialog';
 import { useAppDispatch } from '@/shared/store/hooks/useAppDispatch';
-import { removeVariable } from '@/shared/store/reducers/VariablesSlice';
+import { removeVariable } from '@/shared/store/reducers/variablesSlice';
 
 const STORAGE_KEY = 'variables';
 
@@ -62,11 +62,9 @@ export const VariablesList = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        {filteredVariables.map((variable, i) => {
-          const isEven = i % 2 !== 0;
+        {filteredVariables.map((variable) => {
           return (
             <VariableItem
-              className={`${s.item} ${isEven ? s.even : ''}`}
               key={variable.id}
               variable={variable}
               itemCreated={true}
@@ -74,7 +72,7 @@ export const VariablesList = () => {
             />
           );
         })}
-        <VariableItem className={s.item} />
+        <VariableItem />
       </div>
       <ConfirmDialog
         open={!!dialog}

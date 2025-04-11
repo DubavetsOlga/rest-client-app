@@ -17,7 +17,12 @@
   justify-content: center;
   align-items: center;
   padding: 0.3rem;
-  background-color: var(--color-gray-200);
+  border-right: var(--border-size) solid var(--color-white);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 40px;
 }
 
 .alert-icon {

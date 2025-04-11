@@ -3,9 +3,9 @@
   top: 0;
   display: grid;
   grid-template-columns: 1fr 1.5fr 40px;
-  gap: 1px;
   color: var(--color-white);
   text-align: center;
+  background-color: var(--color-gray-800);
 }
 
 .head-item {
@@ -15,7 +15,7 @@
   justify-content: center;
   gap: 6px;
   padding: 0.3rem;
-  background-color: var(--color-gray-800);
+  border-right: var(--border-size) solid var(--color-white);
 }
 
 @media (max-width: 740px) {

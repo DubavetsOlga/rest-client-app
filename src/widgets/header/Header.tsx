@@ -17,7 +17,7 @@ import { useAppDispatch } from '@/shared/store/hooks/useAppDispatch';
 import {
   clearVariables,
   setVariables,
-} from '@/shared/store/reducers/VariablesSlice';
+} from '@/shared/store/reducers/variablesSlice';
 import { useLocalStorage } from '@/shared/hooks/useLocalStorage';
 import { Variable } from '@/shared/models/types';
 
