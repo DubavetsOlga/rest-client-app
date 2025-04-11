@@ -5,3 +5,5 @@ export { Spinner } from './spinner/Spinner';
 export { ErrorBoundary } from './errorBoundary/ErrorBoundary';
 export { AppErrorBoundary } from './errorBoundary/AppErrorBoundary';
 export { Alert } from './alert/Alert';
+export { Accordion } from './accordion/Accordion';
+export { ConfirmDialog } from '@/shared/components/confirmDialog/ConfirmDialog';
