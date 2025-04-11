@@ -1,0 +1,16 @@
+.accordion {
+  transition: all var(--transition-default);
+}
+
+.accordionTitle {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 1rem 0 0.5rem;
+  font-size: var(--font-size-m);
+  cursor: pointer;
+}
+
+.accordionChildren {
+  margin-left: 1.5rem;
+}
