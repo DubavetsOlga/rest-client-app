@@ -18,9 +18,16 @@
   margin: 0;
 }
 
-.menuHeader {
+.menuHeader, .menuHeaderShort {
   display: flex;
+}
+
+.menuHeader {
   justify-content: flex-end;
+}
+
+.menuHeaderShort {
+  justify-content: center;
 }
 
 .menuItem {
@@ -78,7 +85,7 @@
     display: block;
   }
 
-  .menuHeader {
+  .menuHeader, .menuHeaderShort {
     visibility: hidden;
   }
 

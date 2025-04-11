@@ -8,8 +8,8 @@ import {
   CloudFog,
   ListX,
   History,
-  PanelRightClose,
-  PanelRightOpen,
+  ChevronRight,
+  ChevronLeft,
   Menu,
   X,
   Home,
@@ -77,16 +77,16 @@ export default function SideMenu() {
         onClick={() => setIsOpen(false)}
       >
         <div className={s.menuContainer}>
-          <div className={s.menuHeader}>
+          <div className={isShort ? s.menuHeaderShort : s.menuHeader}>
             <button
               onClick={toggleWidth}
               className={s.toggleWidthButton}
               aria-label={t.menu}
             >
               {isShort ? (
-                <PanelRightClose size={18} />
+                <ChevronRight />
               ) : (
-                <PanelRightOpen size={18} />
+                <ChevronLeft />
               )}
             </button>
           </div>
@@ -95,6 +95,7 @@ export default function SideMenu() {
               <li
                 key={item.href}
                 className={`${s.menuItem} ${isActive(item.href) ? s.active : ''}`}
+                title={isShort ? item.text : ''}
               >
                 <Link
                   href={item.href}
