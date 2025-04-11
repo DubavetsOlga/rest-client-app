@@ -15,7 +15,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (isAuth) {
-      router.push(`/${locale}`);
+      router.replace(`/${locale}`);
     }
   }, [isAuth, router, locale]);
 

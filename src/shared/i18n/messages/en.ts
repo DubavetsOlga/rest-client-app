@@ -10,6 +10,8 @@ export const en = {
     unexpectedError: 'An unexpected error occurred.',
     yes: 'Yes',
     no: 'No',
+    menu: 'Menu',
+    language: 'Language',
   },
   mainPage: {
     welcome: 'Welcome',
@@ -29,8 +31,14 @@ export const en = {
     createAccount: 'Create Account',
   },
   historyPage: {
-    title: 'History',
-    emptyHistory: "You haven't executed any requests. It's empty here. Try:",
+    title: 'History Requests',
+    noRequests: "You haven't executed any requests.",
+    empty: "It's empty here. Try:",
+    deleteRequest: 'Delete request',
+    clearHistory: 'Clear History',
+    confirmRemoval: 'Confirm Removal',
+    confirmClearHistory: 'Are you sure you want to clear history?',
+    confirmRemoveItem: 'Are you sure you want to remove this item?',
   },
   variablesPage: {
     title: 'Variables',
@@ -67,6 +75,17 @@ export const en = {
     readError: 'Failed to load data',
     saveError: 'Failed to save data',
     deleteError: 'Failed to delete data',
+  },
+  firebase: {
+    invalidCredential: 'Invalid Credential',
+    userNotFound: 'No user found with this email',
+    wrongPassword: 'Incorrect password',
+    defaultError: 'Something went wrong',
+    invalidEmail: 'Email address is malformed',
+    emailInUse: 'Email is already registered',
+    tooManyRequests: 'Too many failed login attempts',
+    networkRequestFailed: 'No internet connection',
+    internalError: 'Firebase server issue',
   },
 };
 

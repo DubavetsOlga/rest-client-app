@@ -12,6 +12,8 @@ export const ru: LanguagesObjType = {
     unexpectedError: 'Произошла неожиданная ошибка.',
     yes: 'Да',
     no: 'Нет',
+    menu: 'Меню',
+    language: 'Язык',
   },
   mainPage: {
     welcome: 'Добро пожаловать',
@@ -32,7 +34,13 @@ export const ru: LanguagesObjType = {
   },
   historyPage: {
     title: 'История запросов',
-    emptyHistory: 'Вы не выполнили ни одного запроса. Здесь пусто. Попробуйте:',
+    noRequests: 'Вы не выполнили ни одного запроса.',
+    empty: 'Здесь пусто. Попробуйте:',
+    deleteRequest: 'Удалить запрос',
+    clearHistory: 'Очистить историю',
+    confirmRemoval: 'Подтвердить удаление',
+    confirmClearHistory: 'Вы уверены, что хотите очистить историю?',
+    confirmRemoveItem: 'Вы уверены, что хотите удалить этот запрос?',
   },
   variablesPage: {
     title: 'Переменные',
@@ -69,5 +77,21 @@ export const ru: LanguagesObjType = {
     readError: 'Не удалось загрузить данные',
     saveError: 'Не удалось сохранить данные',
     deleteError: 'Не удалось удалить данные',
+  },
+  errors: {
+    readError: 'Не удалось загрузить данные',
+    saveError: 'Не удалось сохранить данные',
+    deleteError: 'Не удалось удалить данные',
+  },
+  firebase: {
+    invalidCredential: 'Неверные учетные данные',
+    userNotFound: 'Пользователь с таким email не найден',
+    wrongPassword: 'Неверный пароль',
+    defaultError: 'Что-то пошло не так',
+    invalidEmail: 'Некорректный формат email',
+    emailInUse: 'Этот email уже зарегистрирован',
+    tooManyRequests: 'Слишком много попыток входа. Попробуйте позже',
+    networkRequestFailed: 'Нет подключения к интернету',
+    internalError: 'Ошибка сервера Firebase',
   },
 };

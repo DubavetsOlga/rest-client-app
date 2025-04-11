@@ -7,15 +7,27 @@
   transition: transform var(--transition-default);
 }
 
+.menuContainer {
+  position: sticky;
+  top: 5rem;
+}
+
 .menuList {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.menuHeader {
+.menuHeader, .menuHeaderShort {
   display: flex;
+}
+
+.menuHeader {
   justify-content: flex-end;
+}
+
+.menuHeaderShort {
+  justify-content: center;
 }
 
 .menuItem {
@@ -51,7 +63,7 @@
   display: none;
   position: fixed;
   top: 1.25rem;
-  right: 0.25rem;
+  right: 0.5rem;
   z-index: 1100;
   background: transparent;
   border: none;
@@ -73,7 +85,7 @@
     display: block;
   }
 
-  .menuHeader {
+  .menuHeader, .menuHeaderShort {
     visibility: hidden;
   }
 
@@ -93,5 +105,9 @@
 
   .shortMenuLink {
     display: inline;
+  }
+
+  .menuContainer {
+    top: 2rem;
   }
 }
