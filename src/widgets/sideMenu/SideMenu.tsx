@@ -17,10 +17,15 @@ import {
 import { useLocale } from 'next-intl';
 import { translate } from '@/shared/i18n/langSwitcher';
 import { useAuthContext } from '@/shared/hooks/useAuthContext';
+import { HttpMethod } from '@/shared/models/httpMethod';
+import { useAppSelector } from '@/shared/store/hooks/useAppSelector';
 
 export default function SideMenu() {
   const { isAuth, loading } = useAuthContext();
   const path = usePathname();
+
+  const clientLink =
+    useAppSelector((store) => store.restClientReducer.link) ?? REST;
 
   const locale = useLocale();
   const { basic: t } = translate(locale);
@@ -41,7 +46,13 @@ export default function SideMenu() {
   };
 
   const isActive = (href: string) => {
-    return path === href || path.startsWith(`${href}/`);
+    if (href === clientLink) {
+      return Object.values(HttpMethod).some((method) =>
+        path.toUpperCase().startsWith(`/${method}`)
+      );
+    }
+
+    return path === href;
   };
 
   const menuItems = [
@@ -51,7 +62,7 @@ export default function SideMenu() {
       text: t.main,
     },
     {
-      href: REST,
+      href: clientLink,
       icon: <CloudFog />,
       text: t.restClient,
     },
@@ -83,11 +94,7 @@ export default function SideMenu() {
               className={s.toggleWidthButton}
               aria-label={t.menu}
             >
-              {isShort ? (
-                <ChevronRight />
-              ) : (
-                <ChevronLeft />
-              )}
+              {isShort ? <ChevronRight /> : <ChevronLeft />}
             </button>
           </div>
           <ul className={s.menuList}>

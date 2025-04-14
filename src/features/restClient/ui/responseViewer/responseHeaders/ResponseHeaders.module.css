@@ -1,0 +1,12 @@
+.headersTable {
+  width: 100%;
+  font-size: var(--font-size-sm);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.headersTable thead th,
+.headersTable tbody td {
+  border: var(--border-size) solid var(--color-gray-300);
+  padding: 0.25rem;
+}

@@ -1,7 +1,7 @@
 .header {
   display: flex;
   gap: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   background-color: var(--color-white);
   color: var(--color-black);
   border-bottom: var(--border-size) solid var(--border-color);
@@ -12,7 +12,7 @@
 }
 
 .sticky {
-  padding: 0.25rem 1rem;
+  padding: 0.15rem 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 

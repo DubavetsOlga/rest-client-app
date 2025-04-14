@@ -13,10 +13,14 @@ import {
 import s from './style.module.css';
 import { Button, Spinner } from '@/shared/components';
 import { useAuthContext } from '@/shared/hooks/useAuthContext';
+import { useAppSelector } from '@/shared/store/hooks/useAppSelector';
 
 export default function MainPage() {
   const locale = useLocale();
   const { mainPage, basic } = translate(locale);
+
+  const clientLink =
+    useAppSelector((store) => store.restClientReducer.link) ?? REST;
 
   const { isAuth, userName, loading } = useAuthContext();
 
@@ -38,7 +42,7 @@ export default function MainPage() {
       <div className={s.buttonContainer}>
         {isAuth ? (
           <>
-            <Button href={REST}>{basic.restClient}</Button>
+            <Button href={clientLink}>{basic.restClient}</Button>
             <Button href={HISTORY} variant="secondary">
               {basic.history}
             </Button>

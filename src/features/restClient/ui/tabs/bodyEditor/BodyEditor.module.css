@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.editor {
+  width: 100%;
+  flex-grow: 1;
+  background: var(--color-gray-200);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  margin-top: 0.625rem;
+  resize: none;
+  overflow: auto;
+  max-height: calc(100vh - 35rem);
+  min-height: 5rem;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-between;
+  height: 1.5rem;
+  align-items: center;
+}
+
+.beautifyButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.beautifyButton:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .editor {
+    max-height: calc(100vh - 38rem);
+  }
+}

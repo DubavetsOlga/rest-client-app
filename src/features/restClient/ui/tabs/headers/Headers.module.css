@@ -1,0 +1,117 @@
+.container {
+  display: block;
+  max-width: 100%;
+}
+
+.container > table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: var(--font-size-sm);
+  display: flex;
+  flex-direction: column;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.container thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-gray-800);
+  color: var(--color-white);
+  z-index: 1;
+}
+
+.container thead,
+.container tbody {
+  display: block;
+  width: 100%;
+}
+
+.container th,
+.container td {
+  padding: 0.25rem;
+  text-align: left;
+}
+
+.container td {
+  border-right: var(--border-size) solid var(--color-white);
+}
+
+.container th {
+  text-align: center;
+}
+
+.container tbody tr,
+.container thead tr {
+  display: flex;
+}
+
+.container tbody td:nth-child(2),
+.container thead th:nth-child(2) {
+  flex-grow: 1;
+}
+
+.container tbody {
+  max-height: calc(100vh - 35rem);
+  overflow-y: auto;
+}
+
+.container tbody tr:nth-child(odd) {
+  background-color: var(--color-gray-200);
+}
+
+.container tbody tr:nth-child(even) {
+  background-color: var(--color-gray-300);
+}
+
+.container tbody tr:hover {
+  background-color: var(--color-gray-400);
+}
+
+.container tbody td:first-child,
+.container thead th:first-child {
+  width: 40%;
+}
+
+.container tbody td:last-child,
+.container thead th:last-child {
+  width: 2rem;
+}
+
+.container tbody td:last-child {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.container input {
+  width: 100%;
+  border: var(--border-size) solid transparent;
+  background-color: transparent;
+  font-size: var(--font-size-sm);
+  padding: 0.25rem;
+}
+
+.container input:focus {
+  background-color: var(--color-white);
+  outline: none;
+  border-radius: var(--border-radius);
+}
+
+.container input.redBorder {
+  border: var(--border-size) solid var(--color-error-500);
+  border-radius: var(--border-radius);
+}
+
+.container td button {
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: 480px) {
+  .container tbody {
+    max-height: calc(100vh - 37rem);
+  }
+}

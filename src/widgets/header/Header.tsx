@@ -20,6 +20,7 @@ import {
 } from '@/shared/store/reducers/variablesSlice';
 import { useLocalStorage } from '@/shared/hooks/useLocalStorage';
 import { Variable } from '@/shared/models/types';
+import { resetRestClient } from '@/shared/store/reducers/restClientSlice';
 
 export const Header = () => {
   const locale = useLocale();
@@ -33,6 +34,7 @@ export const Header = () => {
     try {
       await logout();
       dispatch(clearVariables());
+      dispatch(resetRestClient());
     } catch (error) {
       toast.error((error as FirebaseError).message || t.unexpectedError);
     }
@@ -58,13 +60,7 @@ export const Header = () => {
     <header className={`${s.header} ${isSticky ? s.sticky : ''}`}>
       <div className={s.logo}>
         <Link href="/">
-          <Image
-            src="/logo.png"
-            priority
-            alt="Logo"
-            width={50}
-            height={50}
-          />
+          <Image src="/logo.png" priority alt="Logo" width={50} height={50} />
         </Link>
         <h2 className={s.title}>REST Client</h2>
       </div>

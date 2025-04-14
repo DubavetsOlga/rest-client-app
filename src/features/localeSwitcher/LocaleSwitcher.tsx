@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import { ReactElement, useState } from 'react';
 import s from './LocaleSwitcher.module.css';
@@ -16,13 +16,21 @@ export const LocaleSwitcher = (): ReactElement => {
   const { basic: t } = translate(locale);
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const [language, setLanguage] = useState<string>(locale);
 
   const handleClickChangeLang = (value: string): void => {
     setLanguage(value);
+
     const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
-    router.push(`/${value}${pathWithoutLocale}`);
+    const searchParamsString = searchParams.toString();
+
+    const newUrl = `/${value}${pathWithoutLocale}${
+      searchParamsString ? `?${searchParamsString}` : ''
+    }`;
+
+    router.push(newUrl);
   };
 
   return (

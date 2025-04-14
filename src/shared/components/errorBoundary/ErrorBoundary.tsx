@@ -1,6 +1,6 @@
 'use client';
 
-import { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ReactNode } from 'react';
 import s from './ErrorBoundary.module.css';
 import { Button } from '@/shared/components';
 type Props = {
@@ -20,10 +20,6 @@ export class ErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError() {
     return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error({ error, errorInfo });
   }
 
   render() {

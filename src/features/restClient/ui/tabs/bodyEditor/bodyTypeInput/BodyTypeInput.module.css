@@ -1,0 +1,10 @@
+.type {
+  display: flex;
+  gap: 0.5rem;
+  font-size: var(--font-size-sm);
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+}
