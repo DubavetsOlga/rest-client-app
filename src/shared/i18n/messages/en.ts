@@ -42,6 +42,15 @@ export const en = {
   },
   variablesPage: {
     title: 'Variables',
+    tableTitle: 'Variable',
+    tableValue: 'Value',
+    confirmRemoval: 'Confirm Removal',
+    confirmRemoveItem: 'Are you sure you want to remove this variable?',
+    variableOverwriteTooltip:
+      'This variable will overwrite an existing one with the same key',
+    variableNamePlaceholder: 'Add new variable',
+    variableValuePlaceholder: 'Add value',
+    variablesFilterPlaceholder: 'Filter variables',
   },
   clientPage: {},
   errorPage: {

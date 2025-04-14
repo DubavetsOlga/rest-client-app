@@ -44,6 +44,15 @@ export const ru: LanguagesObjType = {
   },
   variablesPage: {
     title: 'Переменные',
+    tableTitle: 'Переменная',
+    tableValue: 'Значение',
+    confirmRemoval: 'Подтвердить удаление',
+    confirmRemoveItem: 'Вы уверены, что хотите удалить эту переменную?',
+    variableOverwriteTooltip:
+      'Эта переменная перезапишет существующую с таким же ключом',
+    variableNamePlaceholder: 'Добавить новую переменную',
+    variableValuePlaceholder: 'Добавить значение',
+    variablesFilterPlaceholder: 'Фильтровать переменные',
   },
   clientPage: {},
   errorPage: {

@@ -1,0 +1,57 @@
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius);
+  padding: 0.4rem;
+  outline: none;
+}
+
+.input:focus {
+  background-color: var(--color-white);
+}
+
+.input-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  border-right: var(--border-size) solid var(--color-white);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 40px;
+}
+
+.alert-icon {
+  visibility: visible;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 0.3rem;
+}
+
+.tooltip {
+  visibility: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.tooltip-text {
+  position: absolute;
+  width: 16rem;
+  font-size: var(--font-size-sm);
+  right: calc(50% - 8rem);
+  bottom: 1rem;
+  transition: all var(--transition-default);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-gray-100);
+  padding: 0.3rem;
+  border-radius: var(--border-radius);
+}
