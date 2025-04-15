@@ -1,6 +1,5 @@
 import volha from '../../assets/volha.png';
 import dev2 from '../../assets/dev2.png';
-import dev3 from '../../assets/dev3.png';
 
 export const developersData = [
   {
@@ -13,12 +12,6 @@ export const developersData = [
     name: 'Timofei',
     github: 'https://github.com/timofeynaryshkin',
     photo: dev2,
-    about: 'Frontend Developer',
-  },
-  {
-    name: 'Polina',
-    github: 'https://github.com/lagertt',
-    photo: dev3,
     about: 'Frontend Developer',
   },
 ];

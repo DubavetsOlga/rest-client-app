@@ -31,7 +31,12 @@ export const Developers = () => {
           <div className={s.developerInfo}>
             <h4>{developer.name}</h4>
             <p>{developer.about}</p>
-            <a href={developer.github} target="_blank" className={s.link}>
+            <a
+              href={developer.github}
+              target="_blank"
+              className={s.link}
+              rel="noreferrer"
+            >
               GitHub
             </a>
           </div>

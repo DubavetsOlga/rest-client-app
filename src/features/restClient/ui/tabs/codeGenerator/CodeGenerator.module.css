@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.code {
+  width: 100%;
+  flex-grow: 1;
+  background: var(--color-gray-200);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  margin-top: 0.625rem;
+  resize: none;
+  overflow: auto;
+  max-height: calc(100vh - 35rem);
+  min-height: 5rem;
+}
+
+.select {
+  border: var(--border-size) solid var(--border-color);
+  border-radius: var(--border-radius);
+  max-width: fit-content;
+  height: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .code {
+    max-height: calc(100vh - 38rem);
+  }
+}

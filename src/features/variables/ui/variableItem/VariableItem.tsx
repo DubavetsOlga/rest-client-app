@@ -77,7 +77,7 @@ export const VariableItem = memo(function VariableItem({
             <TriangleAlert
               className={s['alert-icon']}
               size={20}
-              color='var(--color-warning-500)'
+              color="var(--color-warning-500)"
             />
             <i className={s['tooltip-text']}>{t.variableOverwriteTooltip}</i>
           </div>

@@ -1,11 +1,10 @@
 import { HistoryRequestType } from '@/shared/models/types';
+import { encodeToBase64 } from '@/shared/utils/codeBase64';
 
 export const createRequestLink = (request: HistoryRequestType): string => {
-  const encodedUrl = Buffer.from(request.url).toString('base64');
+  const encodedUrl = encodeToBase64(request.url);
   const hasBody = Boolean(request.body);
-  const encodedBody = hasBody
-    ? Buffer.from(request.body || '').toString('base64')
-    : '';
+  const encodedBody = hasBody ? encodeToBase64(request.body || '') : '';
 
   const headers = request.headers || [];
   const headersQuery = headers

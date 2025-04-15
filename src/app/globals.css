@@ -136,3 +136,40 @@ form {
   font-size: var(--font-size-base);
   line-height: 1.5rem;
 }
+
+/* CodeMirror */
+
+.cm-editor {
+  background: transparent !important;
+}
+
+.cm-scroller {
+  background: transparent !important;
+}
+
+.cm-gutters {
+  background: var(--color-gray-200) !important;
+  border-right: var(--border-size) solid var(--color-gray-900) !important;
+}
+
+.cm-activeLineGutter {
+  background: var(--color-gray-300) !important;
+}
+
+.cm-activeLine {
+  background: transparent !important;
+}
+
+.cm-theme .cm-scroller {
+  overflow: visible;
+}
+
+.cm-focused {
+  outline: none !important;
+}
+
+&.cm-focused .cm-selectionBackground,
+.cm-selectionBackground,
+& ::selection {
+  background-color: var(--color-gray-300) !important;
+}

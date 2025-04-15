@@ -18,7 +18,8 @@
   margin: 0;
 }
 
-.menuHeader, .menuHeaderShort {
+.menuHeader,
+.menuHeaderShort {
   display: flex;
 }
 
@@ -85,7 +86,8 @@
     display: block;
   }
 
-  .menuHeader, .menuHeaderShort {
+  .menuHeader,
+  .menuHeaderShort {
     visibility: hidden;
   }
 

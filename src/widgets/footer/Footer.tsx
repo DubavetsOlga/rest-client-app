@@ -13,6 +13,7 @@ export const Footer = () => {
         <a
           href="https://github.com/DubavetsOlga/rest-client-app/"
           target="_blank"
+          rel="noreferrer"
         >
           <Image src={github} alt="github" height={38} priority />
         </a>
@@ -23,6 +24,7 @@ export const Footer = () => {
               href={dev.github}
               target="_blank"
               className={s.devLink}
+              rel="noreferrer"
             >
               {dev.name}
             </a>
@@ -30,7 +32,7 @@ export const Footer = () => {
         </div>
       </div>
       <span>2025</span>
-      <a href="https://rs.school/" target="_blank">
+      <a href="https://rs.school/" target="_blank" rel="noreferrer">
         <Image src={rslogo} alt="rs-school" height={30} priority />
       </a>
     </footer>
