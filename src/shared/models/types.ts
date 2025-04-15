@@ -18,7 +18,6 @@ type RequestType = {
   url: string;
   body: string;
   headers: HeaderType[];
-  response: ResponseType;
 };
 
 export type RestClientType = RequestType & {
