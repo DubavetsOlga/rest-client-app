@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from 'use-intl';
+import { useLocale } from 'next-intl';
 import { translate } from '@/shared/i18n/langSwitcher';
 import { Developers } from '@/widgets/developers/Developers';
 import {

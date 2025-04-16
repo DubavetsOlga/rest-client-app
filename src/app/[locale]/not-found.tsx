@@ -1,7 +1,7 @@
 'use client';
 
 import { NotFound } from '@/widgets/notFound/NotFound';
-import { useLocale } from 'use-intl';
+import { useLocale } from 'next-intl';
 import { translate } from '@/shared/i18n/langSwitcher';
 
 export default function Page() {

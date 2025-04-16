@@ -14,4 +14,5 @@ module.exports = {
     useRouter: jest.fn(),
     getPathname: jest.fn(),
   }),
+  useLocale: () => 'en',
 };

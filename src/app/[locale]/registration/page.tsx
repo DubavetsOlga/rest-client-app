@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import { useLocale } from 'use-intl';
+import { useLocale } from 'next-intl';
 import { RegistrationForm } from '@/features/registration/ui/registrationForm/RegistrationForm';
 import { Spinner } from '@/shared/components';
 import { useAuthContext } from '@/shared/hooks/useAuthContext';
