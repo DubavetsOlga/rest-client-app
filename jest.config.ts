@@ -21,6 +21,8 @@ module.exports = nextJest({
     '!**/*.d.ts',
     '!**/node_modules/**',
     '!**/*.test.tsx',
+    '!**/.next/**',
+    '!**/store/**',
     '!**/*.spec.tsx',
     '!src/__tests__/setup.ts',
   ],

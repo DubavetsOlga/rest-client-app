@@ -13,7 +13,7 @@ export const Spinner = ({ size = 48 }: Props): ReactElement => {
 
   return (
     <div className={s.spinnerContainer}>
-      <span className={s.spinner} style={style} />
+      <span className={s.spinner} style={style} role="status" />
     </div>
   );
 };

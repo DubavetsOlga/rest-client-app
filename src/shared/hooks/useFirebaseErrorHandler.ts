@@ -1,5 +1,5 @@
 import { FirebaseError } from 'firebase/app';
-import { useLocale } from 'use-intl';
+import { useLocale } from 'next-intl';
 import { translate } from '@/shared/i18n/langSwitcher';
 import { toast } from 'react-toastify';
 

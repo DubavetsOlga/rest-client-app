@@ -4,7 +4,7 @@ import s from './Headers.module.css';
 import { useAppDispatch } from '@/shared/store/hooks/useAppDispatch';
 import { deleteHeader } from '@/shared/store/reducers/restClientSlice';
 import { ConfirmDialog } from '@/shared/components';
-import { useLocale } from 'use-intl';
+import { useLocale } from 'next-intl';
 import { translate } from '@/shared/i18n/langSwitcher';
 import { selectHeaders } from '@/shared/store/selectors/restClientSelectors';
 import { NewHeaderItem } from '@/features/restClient/ui/tabs/headers/newHeaderItem/NewHeaderItem';
