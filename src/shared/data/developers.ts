@@ -1,5 +1,5 @@
 import volha from '../../assets/volha.png';
-import dev2 from '../../assets/dev2.png';
+import timofei from '../../assets/timofei.png';
 
 export const developersData = [
   {
@@ -7,11 +7,13 @@ export const developersData = [
     github: 'https://github.com/DubavetsOlga',
     photo: volha,
     about: 'Frontend Developer',
+    from: 'Sopot',
   },
   {
     name: 'Timofei',
     github: 'https://github.com/timofeynaryshkin',
-    photo: dev2,
+    photo: timofei,
     about: 'Frontend Developer',
+    from: 'Batumi',
   },
 ];

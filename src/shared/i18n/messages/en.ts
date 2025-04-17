@@ -17,9 +17,9 @@ export const en = {
     welcome: 'Welcome',
     welcomeBack: 'Welcome back,',
     aboutProject:
-      'The application offers a convenient tool for working with REST API. It includes: request editor with support for formatting and base64 encoding of the request body; response panel with display of HTTP status, headers and other details; ability to select a method (GET, POST, etc.), enter a URL and configure headers; request history for quick access to previous requests.',
+      'REST Client is an API testing tool. It lets send HTTP requests, customize headers, and inspect responses in real time. Key features include a method selector, URL input, request/response editors, and code generation. Users can save variables for reuse and browse their request history.',
     aboutSchool:
-      'The project was developed as part of the training at Rolling Scopes School (RS School), a free online school that offers a unique educational experience combining theory and practice.',
+      'The project was developed as part of the React course at Rolling Scopes School (RS School) — a free online school that offers a unique educational experience combining theory and practice. RS School is open to everyone, regardless of age, professional background, or place of residence. The program thrives on a culture of free education and a strong desire to share knowledge, allowing students to learn from industry experts and collaborate with peers.',
   },
   auth: {
     name: 'Name',
@@ -94,6 +94,8 @@ export const en = {
     Timofei: 'Timofei Naryshkin',
     Polina: 'Polina Ryabova',
     frontendDeveloper: 'Frontend Developer',
+    Sopot: 'Sopot, Poland',
+    Batumi: 'Batumi, Georgia',
   },
   errors: {
     readError: 'Failed to load data',

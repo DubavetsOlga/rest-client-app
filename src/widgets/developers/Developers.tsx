@@ -14,6 +14,7 @@ export const Developers = () => {
     ...dev,
     name: t[dev.name as keyof typeof t],
     about: t.frontendDeveloper,
+    from: t[dev.from as keyof typeof t],
   }));
 
   return (
@@ -31,6 +32,7 @@ export const Developers = () => {
           <div className={s.developerInfo}>
             <h4>{developer.name}</h4>
             <p>{developer.about}</p>
+            <p>{developer.from}</p>
             <a
               href={developer.github}
               target="_blank"

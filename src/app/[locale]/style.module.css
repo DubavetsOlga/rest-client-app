@@ -28,10 +28,10 @@
 }
 
 .aboutProject {
-  text-align: center;
+  text-align: justify;
 }
 
 .aboutSchool {
   font-size: var(--font-size-sm);
-  text-align: center;
+  text-align: justify;
 }
