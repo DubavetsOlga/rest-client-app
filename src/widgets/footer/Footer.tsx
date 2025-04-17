@@ -1,5 +1,3 @@
-'use client';
-
 import s from './Footer.module.css';
 import Image from 'next/image';
 import rslogo from '@/assets/rs-logo.svg';
@@ -32,7 +30,11 @@ export const Footer = () => {
         </div>
       </div>
       <span>2025</span>
-      <a href="https://rs.school/" target="_blank" rel="noreferrer">
+      <a
+        href="https://rs.school/courses/reactjs"
+        target="_blank"
+        rel="noreferrer"
+      >
         <Image src={rslogo} alt="rs-school" height={30} priority />
       </a>
     </footer>
