@@ -40,7 +40,7 @@ describe('Footer Component', () => {
 
   it('contains the RS School logo with correct link', () => {
     const rsLink = screen.getByRole('link', { name: /rs-school/i });
-    expect(rsLink).toHaveAttribute('href', 'https://rs.school/');
+    expect(rsLink).toHaveAttribute('href', 'https://rs.school/courses/reactjs');
     expect(screen.getByAltText('rs-school')).toBeInTheDocument();
   });
 
