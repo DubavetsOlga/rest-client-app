@@ -1,0 +1,38 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 0.25rem;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.aboutContainer {
+  max-width: 54rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aboutProject {
+  text-align: justify;
+}
+
+.aboutSchool {
+  font-size: var(--font-size-sm);
+  text-align: justify;
+}

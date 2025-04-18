@@ -1,0 +1,16 @@
+.loginLink {
+  margin-top: 0.5rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-800);
+}
+
+.loginLink a {
+  text-decoration: underline;
+}
+
+.errorMessage {
+  font-size: var(--font-size-sm);
+  color: var(--color-error-500);
+  height: 1rem;
+  margin-bottom: 0.25rem;
+}

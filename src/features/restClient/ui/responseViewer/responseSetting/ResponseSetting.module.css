@@ -1,0 +1,44 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.responseCode {
+  color: var(--color-white);
+  background: var(--color-gray-800);
+  border-radius: var(--border-radius);
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.infoCode {
+  background-color: var(--color-info-900);
+}
+
+.successCode {
+  background-color: var(--color-success-900);
+}
+
+.redirectionCode {
+  background-color: var(--color-warning-900);
+}
+
+.errorCode {
+  background-color: var(--color-error-900);
+}
+
+.resultType {
+  display: flex;
+  gap: 0.5rem;
+  font-size: var(--font-size-sm);
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+}

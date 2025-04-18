@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.container > button {
+  background-color: var(--color-info-500);
+}
+
+.container > button:hover:not(:disabled) {
+  background-color: var(--color-info-900);
+}
+
+.container > button:disabled {
+  cursor: default;
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .container > button {
+    width: 100%;
+  }
+}
